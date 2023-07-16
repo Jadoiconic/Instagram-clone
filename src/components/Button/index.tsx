@@ -9,7 +9,7 @@ interface ButtonProps{
 
 const ButtonComp = ({title, onPress, }:ButtonProps) => {
   return (
-    <TouchableOpacity style={styles.container}>
+    <TouchableOpacity style={styles.container} onPress={onPress}>
       <Text style={styles.text}>{title}</Text>
     </TouchableOpacity>
   )
@@ -19,7 +19,7 @@ export default ButtonComp
 
 const styles = StyleSheet.create({
     container:{
-        width:250,
+        width:340,
         backgroundColor:'#3797EF',
         alignItems:'center',
         borderRadius:5,
