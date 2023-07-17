@@ -1,4 +1,4 @@
-import { Image, StyleSheet, Text, View } from 'react-native'
+import { Image, StyleSheet, Text, View, useColorScheme } from 'react-native'
 import React from 'react'
 
 interface dataProps {
@@ -6,10 +6,11 @@ interface dataProps {
 }
 
 const Status = ({data}:dataProps) => {
+    const theme = useColorScheme();
     return (
         <View style={styles.container}>
             <Image source={{ uri: data.user.imageUri }} style={styles.image} />
-            <Text>{data.user.name}</Text>
+            <Text style={{color:theme === 'light' ? 'black' : 'white'}} >{data.user.name}</Text>
         </View>
     )
 }

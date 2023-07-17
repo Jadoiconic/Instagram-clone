@@ -16,6 +16,7 @@ const styles = StyleSheet.create({
     },
     story:{
         paddingVertical:10,
+        marginVertical:1,
     },
 });
 

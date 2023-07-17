@@ -1,4 +1,4 @@
-import { View, Text, SafeAreaView, useColorScheme } from 'react-native'
+import { View, Text, SafeAreaView, useColorScheme, ScrollView } from 'react-native'
 import React from 'react'
 import styles from './style'
 
@@ -10,13 +10,14 @@ import { instagram } from '../../constants/svgData';
 import Status from '../../components/Status';
 import { FlatList } from 'react-native-gesture-handler';
 import stories from '../../constants/stories';
+import PostComponent from '../../components/Post/Index';
 
 
 const MainScreen = () => {
 
     const theme = useColorScheme();
     return (
-        <View style={styles.root}>
+        <ScrollView style={styles.root}>
             <View style={styles.header}>
                 <View>
                     <Icon name="camera-outline" size={30} color={theme === 'light' ? 'black' : 'white'} />
@@ -38,7 +39,10 @@ const MainScreen = () => {
               horizontal
               showsHorizontalScrollIndicator={false}/>
             </View>
-        </View>
+
+            {/* Posts */}
+            <PostComponent />
+        </ScrollView>
     )
 }
 
