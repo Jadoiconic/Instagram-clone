@@ -6,6 +6,8 @@ const styles = StyleSheet.create({
     container:{
         flexDirection:'row',
         paddingHorizontal:5,
+        alignItems:'center',
+        marginTop:10,
     },
     profileContent:{
         flexDirection:'row',
@@ -19,6 +21,12 @@ const styles = StyleSheet.create({
         width:30,
         height:30,
         borderRadius:40,
+    },
+    pic:{
+        width:20,
+        height:20,
+        borderRadius:10,
+        marginRight:5,
     },
     image:{
         width:windowWidth,

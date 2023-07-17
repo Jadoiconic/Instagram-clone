@@ -11,6 +11,7 @@ import Status from '../../components/Status';
 import { FlatList } from 'react-native-gesture-handler';
 import stories from '../../constants/stories';
 import PostComponent from '../../components/Post/Index';
+import usersPost from '../../constants/usersPost';
 
 
 const MainScreen = () => {
@@ -41,7 +42,9 @@ const MainScreen = () => {
             </View>
 
             {/* Posts */}
-            <PostComponent />
+            <FlatList 
+            data = {usersPost} 
+            renderItem={({item})=><PostComponent items ={item} />}/>
         </ScrollView>
     )
 }
