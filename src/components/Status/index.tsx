@@ -21,6 +21,9 @@ const styles = StyleSheet.create({
         width: 56,
         height: 56,
         borderRadius: 50,
+        resizeMode:'cover',
+        borderWidth:2,
+        borderColor:'linear-gradient(90deg, rgba(207,12,12,1) 0%, rgba(198,20,103,1) 38%, rgba(241,180,0,1) 100%)',
     },
     container: {
         alignContent: 'center',
