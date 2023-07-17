@@ -7,17 +7,12 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import Authorization from './src/Screens/Auth/Authorization ';
 import LoginScreen from './src/Screens/Auth/Login';
+import MainScreen from './src/Screens/MainScreen';
+import SearchScreen from './src/Screens/SearchScreen';
 
 const Tabs = createMaterialBottomTabNavigator();
 const Stack = createStackNavigator();
 
-function HomeScreen() {
-  return (
-    <SafeAreaView>
-      <Text>Welcome</Text>
-    </SafeAreaView>
-  );
-};
 
 // ! Stack Navigator
 const RootStack = () => {
@@ -41,19 +36,19 @@ const BottomTab = () => {
       screenOptions={{
         tabBarLabel: '',
       }}>
-      <Tabs.Screen name="Home" component={HomeScreen} options={{
+      <Tabs.Screen name="Home" component={MainScreen} options={{
         tabBarIcon: ({ color }) => (<Fontisto name="home" size={32} color={color} />),
       }} />
-      <Tabs.Screen name="Search" component={HomeScreen} options={{
+      <Tabs.Screen name="Search" component={SearchScreen} options={{
         tabBarIcon: ({ color }) => (<Ionicons name="ios-search" size={32} color={color} />)
       }} />
-      <Tabs.Screen name="Igtv" component={HomeScreen} options={{
+      <Tabs.Screen name="Igtv" component={MainScreen} options={{
         tabBarIcon: ({ color }) => (<AntDesign name="plussquareo" size={32} color={color} />)
       }} />
-      <Tabs.Screen name="Likes" component={HomeScreen} options={{
+      <Tabs.Screen name="Likes" component={MainScreen} options={{
         tabBarIcon: ({ color }) => (<Ionicons name="ios-heart-outline" size={32} color={color} />)
       }} />
-      <Tabs.Screen name="Profile" component={HomeScreen} options={{
+      <Tabs.Screen name="Profile" component={MainScreen} options={{
         tabBarIcon: ({ color }) => (<Ionicons name="ios-person" size={32} color={color} />)
       }} />
     </Tabs.Navigator>
