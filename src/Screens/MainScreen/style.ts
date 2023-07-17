@@ -14,6 +14,9 @@ const styles = StyleSheet.create({
         width:80,
         justifyContent:'space-around',
     },
+    story:{
+        paddingVertical:10,
+    },
 });
 
 export default styles;
